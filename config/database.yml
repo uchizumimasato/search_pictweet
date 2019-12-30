@@ -15,7 +15,6 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
-  socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -51,4 +50,4 @@ production:
   <<: *default
   database: pictweet_production
   username: pictweet
-  password: <%= ENV['PICTWEET_DATABASE_PASSWORD'] %>
+  password: <%= ENV['pictweet_DATABASE_PASSWORD'] %>
